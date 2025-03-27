@@ -16,6 +16,15 @@
   border-radius: 4px;
 }
 
+/* 添加照片样式 */
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
 .profile-info {
   flex: 1;
 }
