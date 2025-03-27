@@ -58,6 +58,11 @@
   .placeholder-image {
     height: 350px;
   }
+
+   /* 添加照片响应式样式 */
+  .profile-photo {
+    max-height: 350px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -67,6 +72,11 @@
 
   .placeholder-image {
     height: 300px;
+  }
+
+   /* 添加照片响应式样式 */
+  .profile-photo {
+    max-height: 300px;
   }
 
   .profile-info h2 {
