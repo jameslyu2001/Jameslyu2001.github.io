@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #643b3b;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
