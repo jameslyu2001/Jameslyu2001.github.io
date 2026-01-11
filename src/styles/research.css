@@ -42,7 +42,8 @@
 
 .research-coauthors,
 .research-subtitle,
-.research-advisor {
+.research-advisor,
+.research-date {
   font-style: italic;
   color: #666;
   margin-bottom: 0.75rem;

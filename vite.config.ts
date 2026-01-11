@@ -14,6 +14,7 @@ export default defineConfig({
         cv: 'cv.html',
         research: 'research.html',
         teaching: 'teaching.html',
+        contact: 'contact.html',
       },
     },
   },
