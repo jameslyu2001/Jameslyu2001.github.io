@@ -10,8 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/james-lyu-website/assets/research-z3jAOYyX.js"></script>
-  <link rel="modulepreload" crossorigin href="/james-lyu-website/assets/main-ZdNwQwzY.js">
+  <script type="module" crossorigin src="/james-lyu-website/assets/main-ZdNwQwzY.js"></script>
   <link rel="stylesheet" crossorigin href="/james-lyu-website/assets/main-CoGN_giA.css">
   <link rel="stylesheet" crossorigin href="/james-lyu-website/assets/research-BZ9K6Zc_.css">
 </head>
@@ -155,5 +154,39 @@
     </div>
   </footer>
 
+  <script>
+    // Research page expand/collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const researchItems = document.querySelectorAll('.research-item');
+      
+      researchItems.forEach(function(item) {
+        const title = item.querySelector('.research-title');
+        const details = item.querySelector('.research-details');
+        
+        if (!title || !details) {
+          return;
+        }
+        
+        // Ensure details are initially hidden
+        details.style.display = 'none';
+        
+        // Toggle function
+        title.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          if (details.style.display === 'none' || details.style.display === '') {
+            details.style.display = 'block';
+            title.classList.add('expanded');
+            title.setAttribute('aria-expanded', 'true');
+          } else {
+            details.style.display = 'none';
+            title.classList.remove('expanded');
+            title.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
