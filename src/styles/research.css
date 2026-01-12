@@ -27,7 +27,7 @@
   margin-bottom: 2.5rem;
   padding: 1.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px dashed #ddd;
+  border-bottom: 1px solid #ddd;
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -42,57 +42,33 @@
   border-bottom: none;
 }
 
-.research-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  cursor: pointer;
-}
-
-.research-item h3 {
+.research-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
-  margin: 0;
-  flex: 1;
-}
-
-.research-toggle {
-  background: none;
-  border: 2px solid #643b3b;
   color: #643b3b;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  margin: 0 0 1rem 0;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.3s ease;
-  padding: 0;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.research-title:hover {
+  color: #8a5d5d;
+}
+
+.research-title:before {
+  content: "+";
+  position: absolute;
+  right: 0;
   font-size: 1.5rem;
-  line-height: 1;
-}
-
-.research-toggle:hover {
-  background-color: #643b3b;
-  color: white;
-}
-
-.research-toggle.expanded {
-  background-color: #643b3b;
-  color: white;
-}
-
-.toggle-icon {
-  display: inline-block;
+  font-weight: 300;
   transition: transform 0.3s ease;
 }
 
-.research-toggle.expanded .toggle-icon {
-  transform: rotate(45deg);
+.research-title.expanded:before {
+  content: "−";
+  transform: rotate(0deg);
 }
 
 .research-details {
@@ -182,17 +158,12 @@
     padding: 1rem;
   }
 
-  .research-item h3 {
+  .research-title {
     font-size: 1.2rem;
+    padding-right: 1.2rem;
   }
 
-  .research-header {
-    gap: 0.5rem;
-  }
-
-  .research-toggle {
-    width: 28px;
-    height: 28px;
-    font-size: 1.2rem;
+  .research-title:before {
+    font-size: 1.3rem;
   }
 }
