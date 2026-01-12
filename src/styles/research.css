@@ -43,7 +43,7 @@
 }
 
 .research-title {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #643b3b;
   margin: 0 0 1rem 0;
@@ -63,7 +63,7 @@
   content: "+";
   position: absolute;
   right: 0;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   font-weight: 300;
   transition: transform 0.3s ease;
   pointer-events: none;

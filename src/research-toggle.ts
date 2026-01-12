@@ -1,36 +1,32 @@
 // Research page expand/collapse functionality
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const researchItems = document.querySelectorAll('.research-item');
   
-  researchItems.forEach(item => {
+  researchItems.forEach(function(item) {
     const title = item.querySelector('.research-title') as HTMLElement;
     const details = item.querySelector('.research-details') as HTMLElement;
     
-    if (!title || !details) return;
+    if (!title || !details) {
+      return;
+    }
     
     // Ensure details are initially hidden
     details.style.display = 'none';
-    title.setAttribute('aria-expanded', 'false');
     
     // Toggle function
-    const toggleDetails = (e: Event) => {
+    title.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
       
-      const isExpanded = title.getAttribute('aria-expanded') === 'true';
-      
-      if (isExpanded) {
-        details.style.display = 'none';
-        title.setAttribute('aria-expanded', 'false');
-        title.classList.remove('expanded');
-      } else {
+      if (details.style.display === 'none' || details.style.display === '') {
         details.style.display = 'block';
-        title.setAttribute('aria-expanded', 'true');
         title.classList.add('expanded');
+        title.setAttribute('aria-expanded', 'true');
+      } else {
+        details.style.display = 'none';
+        title.classList.remove('expanded');
+        title.setAttribute('aria-expanded', 'false');
       }
-    };
-    
-    // Toggle on title click
-    title.addEventListener('click', toggleDetails);
+    });
   });
 });
