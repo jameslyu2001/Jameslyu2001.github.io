@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     title.setAttribute('aria-expanded', 'false');
     
     // Toggle function
-    const toggleDetails = () => {
+    const toggleDetails = (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
       const isExpanded = title.getAttribute('aria-expanded') === 'true';
       
       if (isExpanded) {
