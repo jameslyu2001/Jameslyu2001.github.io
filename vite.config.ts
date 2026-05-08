@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite';
 
-// Replace with your actual GitHub repo name if different
-const repoName = 'james-lyu-website';
-
+// GitHub user site (https://jameslyu2001.github.io/) is served from repo root; base stays '/'.
+// If you ever use project pages instead, set base to '/repo-name/'.
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? `/${repoName}/` : '/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

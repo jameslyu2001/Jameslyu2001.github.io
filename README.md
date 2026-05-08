@@ -18,8 +18,8 @@ This website is built with HTML, CSS, and TypeScript, with Vite as the build too
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YourUsername/YourUsername.github.io.git
-cd YourUsername.github.io
+git clone https://github.com/jameslyu2001/jameslyu2001.github.io.git
+cd jameslyu2001.github.io
 ```
 
 2. Install dependencies:
